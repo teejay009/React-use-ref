@@ -13,7 +13,8 @@ const App = () => {
 
   const startTimer = () => {
     timerid.current = setInterval(() => {
-        render.current++
+        render.current++;
+        setSeconds
     })
   }
 
