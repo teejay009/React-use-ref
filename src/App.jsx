@@ -25,7 +25,7 @@ const App = () => {
   };
 
   const resetTimer = () => {
-    startTimer()
+    stopTimer()
     if(Seconds){
       renders.current = 0
       setSeconds(0)
