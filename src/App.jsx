@@ -1,5 +1,8 @@
 import { useState, useRef } from "react";
-const [seconds,setSeconds] = useState(0)
+const [seconds,setSeconds] = useState(0);
+
+
+const renders = useRef(0);
 
 
 
