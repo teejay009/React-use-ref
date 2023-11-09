@@ -2,10 +2,9 @@ import { useState, useEffect } from "react";
 
 import React from "react";
 
-const getArray = () => {
-  for(let i = 0; i < 100000000; i++) {
 
-  }
+
+  
   return ['Muhammad', "Fine Boy"]
 }
 
