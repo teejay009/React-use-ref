@@ -39,7 +39,9 @@ const App = () => {
       <br />
 
       <section>
+        <button>Stop</button>
         
+
       </section>
 
     </main>
