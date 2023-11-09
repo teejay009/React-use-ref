@@ -40,7 +40,8 @@ const App = () => {
 
       <section>
         <button>Stop</button>
-        
+        <button>Start</button>
+
 
       </section>
 
