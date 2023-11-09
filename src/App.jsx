@@ -51,6 +51,9 @@ const App = () => {
 
         <p>Seconds</p>
 
+        <br />
+        <br />
+
     </main>
 
   )
