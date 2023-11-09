@@ -12,12 +12,9 @@ const handleInputChange = (e) => {
     renders.current++
 }
 
-
-
-
-
-  
-  
+const focusOnImput = () => {
+    inputRef.current.focus()
+}
 
 
 const App = () => {
@@ -25,21 +22,11 @@ const App = () => {
 
 
 
-  
-  
-
-
-
-  
-
-  
-
-
-
   return(
     <main className="App">
         
         <input
+        ref={inputRef}
        type="text" 
       value={randomInput}
       placeholder='Type anything...'
