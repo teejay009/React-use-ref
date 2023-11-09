@@ -14,8 +14,8 @@ const App = () => {
   const startTimer = () => {
     timerid.current = setInterval(() => {
         render.current++;
-        setSeconds
-    })
+        setSeconds(prev => + 1);
+    }, 1000)
   }
 
 
