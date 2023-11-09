@@ -1,66 +1,58 @@
 import { useState, useRef } from "react";
-const [seconds,setSeconds] = useState(0);
-
-
-const renders = useRef(0);
-
-const inputRef = useRef()
-
-const handleInputChange = (e) => {
-    setRandomInput(e.target.value);
-
-    renders.current++
-}
-
-const focusOnImput = () => {
-    inputRef.current.focus()
-}
-
 
 const App = () => {
   const [randomInput, setRandomInput] = useState("");
+  const [Seconds, setSeconds] = useState(0);
+
+  const renders = useRef(0)
+
+  const inputRef = useRef()
+
+  const handleInputChange = (e) => {
+    setRandomInput(e.target.value)
+
+    renders.current++
+  }
+
+  const focusOnInput = () =>{
+    inputRef.current.focus()
+  }
 
 
 
-  return(
+  return (
     <main className="App">
-        
-        <input
-        ref={inputRef}
-       type="text" 
-      value={randomInput}
-      placeholder='Type anything...'
-      onChange={(e) => setRandomInput(e.target.value)}
+      <input
+      ref={inputRef}
+      onChange={handleInputChange}
+        type="text"
+        value={randomInput}
+        placeholder="Type anything"
+      
       />
-      <p>Result: {randomInput}</p>
+      <p>Renders: {randomInput}</p>
 
       <br />
       <br />
 
       <section>
-        <button>Stop</button>
         <button>Start</button>
-        
-        </section>
+        <button>Stop</button>
+      </section>
 
-        <button>Reset</button>
+      <button>Reset</button>
 
-        <br />
-        <br />
+      <br/>
+      <br/>
 
-        <p>Seconds</p>
+      <p>Seconds:</p>
 
-        <br />
-        <br />
+      <br/>
+      <br/>
 
-        <section>
-
-        </section>
-
+      <p>{randomInput}</p>
     </main>
-
-  )
-
-}
+  );
+};
 
 export default App;
