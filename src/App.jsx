@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect } from "react";
 
 import React from "react";
 
@@ -28,7 +28,6 @@ const App = () => {
   useEffect(() => {
     console.log("New Array");
   }, [myArray])
-
 
 
 
