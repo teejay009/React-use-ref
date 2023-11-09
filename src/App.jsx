@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { render } from "react-dom";
 
 const App = () => {
   const [randomInput, setRandomInput] = useState("");
@@ -6,7 +7,17 @@ const App = () => {
 
   const renders = useRef(0)
 
-  const inputRef = useRef()
+  const inputRef = useRef();
+
+  const timerid = useRef();
+
+  const startTimer = () => {
+    timerid.current = setInterval(() => {
+        render.current++
+    })
+  }
+
+
 
   const handleInputChange = (e) => {
     setRandomInput(e.target.value)
@@ -14,9 +25,9 @@ const App = () => {
     renders.current++
   }
 
-  const focusOnInput = () =>{
-    inputRef.current.focus()
-  }
+//   const focusOnInput = () =>{
+//     inputRef.current.focus()
+//   }
 
 
 
