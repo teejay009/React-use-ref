@@ -4,7 +4,13 @@ const [seconds,setSeconds] = useState(0);
 
 const renders = useRef(0);
 
-const handleInputChange = (e) => {}
+const inputRef = useRef
+
+const handleInputChange = (e) => {
+    setRandomInput(e.target.value);
+
+    renders.current++
+}
 
 
 
