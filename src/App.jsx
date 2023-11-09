@@ -1,46 +1,46 @@
 import { useState, useRef } from "react";
-import { render } from "react-dom";
 
 const App = () => {
   const [randomInput, setRandomInput] = useState("");
   const [Seconds, setSeconds] = useState(0);
 
-  const renders = useRef(0)
+  const renders = useRef(0);
 
   const inputRef = useRef();
 
-  const timerid = useRef();
+  const timerId = useRef();
 
   const startTimer = () => {
-    timerid.current = setInterval(() => {
-        render.current++;
-        setSeconds(prev => + 1);
-    }, 1000)
-  }
+    timerId.current = setInterval(() => {
+      renders.current++;
+      setSeconds((prev) => prev + 1);
+    }, 1000);
+    inputRef.current.focus();
+  };
 
-
+  const stopTimer = () => {
+    clearInterval(timerId.current);
+    timerId.current = 0;
+  };
 
   const handleInputChange = (e) => {
-    setRandomInput(e.target.value)
+    setRandomInput(e.target.value);
 
-    renders.current++
-  }
+    renders.current++;
+  };
 
-//   const focusOnInput = () =>{
-//     inputRef.current.focus()
-//   }
-
-
+  //const focusOnInput = () =>{
+  //inputRef.current.focus()
+  // }
 
   return (
     <main className="App">
       <input
-      ref={inputRef}
-      onChange={handleInputChange}
+        ref={inputRef}
+        onChange={handleInputChange}
         type="text"
         value={randomInput}
         placeholder="Type anything"
-      
       />
       <p>Renders: {renders.current}</p>
 
@@ -48,19 +48,19 @@ const App = () => {
       <br />
 
       <section>
-        <button>Start</button>
-        <button>Stop</button>
+        <button onClick={stopTimer}>Stop</button>
+        <button onClick={startTimer}>Start</button>
       </section>
 
       <button>Reset</button>
 
-      <br/>
-      <br/>
+      <br />
+      <br />
 
-      <p>Seconds:</p>
+      <p>Seconds: {Seconds}</p>
 
-      <br/>
-      <br/>
+      <br />
+      <br />
 
       <p>{randomInput}</p>
     </main>
