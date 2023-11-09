@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
+const [seconds,setSeconds] = useState(0)
 
-import React from "react";
+
 
 
 
@@ -53,6 +54,10 @@ const App = () => {
 
         <br />
         <br />
+
+        <section>
+
+        </section>
 
     </main>
 
