@@ -41,9 +41,10 @@ const App = () => {
       <section>
         <button>Stop</button>
         <button>Start</button>
+        
+        </section>
 
-
-      </section>
+        <button>Reset</button>
 
     </main>
 
